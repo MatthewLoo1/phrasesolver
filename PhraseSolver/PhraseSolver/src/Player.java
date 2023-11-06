@@ -37,11 +37,11 @@ public class Player
         name = newName;
     }
 
-    // Accessor methods
+    // Accessor method that is able to get the name and return the name
     public String getName() {
         return name;
     }
-
+    // Accessor method that gets the points and returns the total
     public int getPoints() {
         return points;
     }
