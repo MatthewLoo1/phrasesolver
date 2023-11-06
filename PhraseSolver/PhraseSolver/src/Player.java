@@ -27,6 +27,25 @@ public class Player
     name = inputName;
     points = 0;
 
+  // Method to update the player's points
+    public void updatePoints(int points) {
+        this.points += points;
+    }
+
+    // Method to change the player's name
+    public void changeName(String newName) {
+        name = newName;
+    }
+
+    // Accessor methods
+    public String getName() {
+        return name;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
     System.out.println("Hello and welcome to the game, " + name);
   }
   /* your code here - accessor(s) */ 
