@@ -27,7 +27,7 @@ public class PhraseSolver {
 
         Scanner input = new Scanner(System.in);
 
-        boolean correct = true;
+        // boolean correct = true;
         while (!solved) {
 
 
@@ -39,9 +39,9 @@ public class PhraseSolver {
             String move = input.nextLine();
 
 
-            correct = checkMove(move);
+            solved = checkMove(move, curentPlayerName);
 
-            if (correct) {
+            if (solved) {
                 solved = true;
                 System.out.println(currentPlayerName + " wins!");
             } else {
@@ -50,7 +50,21 @@ public class PhraseSolver {
         }
     }
 
-    private boolean checkMove(String move) {
+    private boolean checkMove(String move, String currentPlayerName) {
+
+        //This checks if the move solves the phrase that is given
+        if (move.equals("your_solved_phrase"))
+        {
+            return true;
+        }
+        else{ 
+            
+            char letter = move.charAt(0);
+            if (board.contains(String.valueOf(letter))) {
+                System.out.println("Letter '" + letter + "' is in the phrase.");
+            } else {
+                System.out.println("Letter '" + letter + "' is not in the phrase.");
+            }
         
         return false; 
     }
